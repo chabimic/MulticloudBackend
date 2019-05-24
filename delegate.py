@@ -4,37 +4,36 @@ def getServices():
     services = [
         {
             "service-id": "252df035-349d-43e3-b106-5e3c2a6c2545",
-            "service-description": "vCPE",
+            "service_description": "vCPE",
             "resource-version": "1554189554096"
         },
         {
             "service-id": "f5728144-f4a2-4bf8-9f0e-4ee924235c42",
-            "service-description": "vFW",
+            "service_description": "vFW",
             "resource-version": "1554189553181"
         },
         {
             "service-id": "8ef4bb58-4c86-48ed-bb86-d463ac198848",
-            "service-description": "vFWCL",
+            "service_description": "vFWCL",
             "resource-version": "1554189553505"
         },
         {
             "service-id": "79b9f9cc-7582-47db-ac2f-6cab4637f493",
-            "service-description": "gNB",
+            "service_description": "gNB",
             "resource-version": "1554189554715"
         },
         {
             "service-id": "befcdeae-7cbf-4570-9a29-9c1397308268",
-            "service-description": "vLB",
+            "service_description": "vLB",
             "resource-version": "1554189553791"
         },
         {
             "service-id": "bf1cbc90-0091-40e0-95cd-d6dccf7a6d5f",
-            "service-description": "vIMS",
+            "service_description": "vIMS",
             "resource-version": "1554189554384"
         }
     ]
-
-    return jsonify({'services': services})
+    return jsonify(services)
 
 def getCloudRegions():
     #skorzystać z GET /cloud-infrastructure/cloud-regions
@@ -87,4 +86,4 @@ def getCloudRegions():
             }
         }
     ]
-    return jsonify({'cloud-region': cloudRegions})
+    return jsonify(cloudRegions)
