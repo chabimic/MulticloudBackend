@@ -16,6 +16,11 @@ def getServices():
 def getCloudRegions():
     return delegate.getCloudRegions()
 
+@app.route("/cloudTypes", methods=['GET'])
+def getCloudTypes():
+    return delegate.getCloudTypes()
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 

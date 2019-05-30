@@ -1,5 +1,21 @@
 from flask import jsonify
 
+
+def getCloudTypes():
+    cloudTypes = [
+        {
+            "type": "OpenStack",
+        },
+        {
+            "type": "Kubernetes"
+        },
+        {
+            "type": "Windriver"
+        },
+    ]
+    return jsonify(cloudTypes);
+
+
 def getServices():
     services = [
         {
@@ -35,8 +51,9 @@ def getServices():
     ]
     return jsonify(services)
 
+
 def getCloudRegions():
-    #skorzystać z GET /cloud-infrastructure/cloud-regions
+    # skorzystać z GET /cloud-infrastructure/cloud-regions
     cloudRegions = [
         {
             "cloud-owner": "CloudOwner",
