@@ -7,7 +7,6 @@ CORS(app)
 def index():
     return "Hello, World!"
 
-
 @app.route("/services", methods=['GET'])
 def getServices():
     return delegate.getServices()
@@ -19,10 +18,6 @@ def getCloudRegions():
 @app.route("/cloudTypes", methods=['GET'])
 def getCloudTypes():
     return delegate.getCloudTypes()
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route('/success/<name>')
 def success(name):
