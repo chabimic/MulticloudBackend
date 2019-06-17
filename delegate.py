@@ -1,19 +1,22 @@
 from flask import jsonify
-
+from adapter import *
 
 def getCloudTypes():
     cloudTypes = [
         {
             "type": "OpenStack",
+            "versions": ["Ocata", "Pike", "Rocky"]
         },
         {
-            "type": "Kubernetes"
+            "type": "Kubernetes",
+            "versions": ["1", "2", "3"]
         },
         {
-            "type": "Windriver"
+            "type": "Windriver",
+            "versions": ["titanium", "abc"]
         },
     ]
-    return jsonify(cloudTypes);
+    return jsonify(adoptJsonToAngular(json.dumps(cloudTypes)))
 
 
 def getServices():
@@ -49,7 +52,7 @@ def getServices():
             "resource-version": "1554189554384"
         }
     ]
-    return jsonify(services)
+    return jsonify(adoptJsonToAngular(json.dumps(services)))
 
 
 def getCloudRegions():
@@ -103,4 +106,4 @@ def getCloudRegions():
             }
         }
     ]
-    return jsonify(cloudRegions)
+    return jsonify(adoptJsonToAngular(json.dumps(cloudRegions)))
